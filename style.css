@@ -16,6 +16,8 @@ body {
     text-decoration: none;
   }
   
+/*Flex display items start here*/
+
   header {
     display: flex;
     width: 100%;
@@ -113,10 +115,30 @@ body {
   .cardFilter {
     cursor: pointer;
   }
+
+  /*Another Interior Page Grid Display Constructed Here*/
+
+  .anotherInteriorPage {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: 'card'
+    'card'
+    'card'
+    'card'
+    'card'
+    'card'
+    'card'
+    'card'
+    'card'
+    'card';
+    grid-template-columns: 83%;
+    grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+  }
   
   .card {
     display: flex;
-    margin-left: 20%;
+    margin-left: 15%;
     margin-bottom: 20px;
     background-color: white;
     width: 66%;
@@ -148,7 +170,7 @@ body {
     display: inline-block;
     font-size: 18px;
     font-weight: 500;
-    margin: 2px 0px;
+    margin: 30px 0px 0px;
     cursor: pointer;
   }
   
@@ -201,8 +223,28 @@ body {
     padding-right: 10px;
   }
   
-  @media only screen and (max-width:800px) {
-    
+/*Media Query Sizing Begins Here*/
+
+  @media only screen and (max-width:600px) {
+    .anotherInteriorPage {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      grid-template-areas: 'card'
+      'card'
+      'card'
+      'card'
+      'card'
+      'card'
+      'card'
+      'card'
+      'card'
+      'card';
+      grid-template-columns: 100%;
+      grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+    }
+
+
     .card {
       width: fit-content;
       height: fit-content;
